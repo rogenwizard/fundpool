@@ -56,7 +56,7 @@ public class TestAllocationSupply {
         Fund fund20 = new Fund(20, 61);
         Fund[] funds = new Fund[] {fund1, fund2, fund3, fund4, fund5, fund6, fund7, fund8, fund9, fund10,
                 fund11, fund12, fund13, fund14, fund15, fund16, fund17, fund18, fund19, fund20};
-        List<AllocationSupplyResult> allocationSupplyResults = allocationSupply.allocationSupply(funds, 5000, 100000);
+        List<AllocationSupplyResult> allocationSupplyResults = allocationSupply.allocationSupply(funds, 0, 100000);
         Assert.assertTrue(allocationSupplyResults.size() == 20);
         Assert.assertTrue(allocationSupplyResults.get(10).getAfterAllocationShotfalls() == 60);
     }

@@ -98,6 +98,7 @@ public class AllocationSupply {
                 allocationInfos[j] = Util.computeFundValue(funds[j].getFund(), funds[index].getFund(), 2);
                 remain = Util.computeFundValue(remain, allocationInfos[j], 2);
                 if (Util.compareFundValue(remain, 0) != 1) {
+                    allocationInfos[j] = Util.computeFundValue(remain, allocationInfos[j], 1);
                     break;
                 }
             }
